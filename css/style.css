@@ -39,8 +39,81 @@ input {
 }
 
 .container {
-    padding: 20px;
+    padding: 20px 40px;
 }
+
+.col {
+    width: 50%;
+}
+
+.col-text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.col-img {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.col-img img {
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.title {
+    font-size: 48px;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: var(--orange-500);
+}
+
+.description {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--green-700);
+}
+
+.btn-content {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 12px;
+    font-weight: 100;
+    letter-spacing: 0.0.1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn .btn-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.btn strong {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.btn-android { background-color: var(--green-700); }
+.btn-android:hover { background-color: var(--green-800); }
+
+.btn-apple { background-color: var(--orange-500); }
+.btn-apple:hover { background-color: var(--orange-700); }
 
 /* Menu */
 .menu-container {
@@ -64,4 +137,13 @@ input {
     color: var(--green-700);
     font-size: 20px;
     font-weight: 500;
+}
+
+/* Header */
+.header-container {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    align-items: center;
+    justify-content: space-between;
 }
