@@ -8,6 +8,7 @@
     --yellow-500: #FFB027;
     --yellow-100: #FFC561;
     --green-700: #1B4332;
+    --green-800: #112a20;
     --gray-300: #D9D9D9;
     --gray-100: #F9F9ED;
 }
@@ -25,6 +26,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Poppins', sans-serif;
+    line-height: 3rem;
 }
 
 ul { list-style: none; }
