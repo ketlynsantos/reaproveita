@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --red-500: #D13D2E;
+    --orange-700: #EF7A37;
+    --orange-500: #F28A14;
+    --orange-100: #F6EAD4;
+    --yellow-500: #FFB027;
+    --yellow-100: #FFC561;
+    --green-700: #1B4332;
+    --gray-300: #D9D9D9;
+    --gray-100: #F9F9ED;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+}
