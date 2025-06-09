@@ -167,11 +167,101 @@ input {
     font-weight: 500;
 }
 
-/* Header */
-.header-container {
+/* Como Funciona */
+.how-work {
+    padding: 80px 40px 0;
+    margin-bottom: 20px;
+}
+
+.how-work .col-img {
+    justify-content: flex-start;
+}
+
+.how-work .col-img img {
+    width: auto !important;
+}
+
+.steps {
     display: flex;
-    flex-direction: row;
-    gap: 60px;
     align-items: center;
-    justify-content: space-between;
+    gap: 20px;
+}
+
+.step {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    background-color: white;
+    cursor: pointer;
+}
+
+.step.red {
+    border: 2px solid var(--red-500);
+    color: var(--red-500);
+}
+
+.step.orange {
+    border: 2px solid var(--orange-700);
+    color: var(--orange-700);
+}
+
+.step.yellow {
+    border: 2px solid var(--yellow-500);
+    color: var(--yellow-500);
+}
+
+.step.yellow-light {
+    border: 2px solid var(--yellow-100);
+    color: var(--yellow-100);
+}
+
+.step.active.red {
+    background-color: var(--red-500);
+    color: white;
+}
+
+.step.active.orange {
+    background-color: var(--orange-500);
+    color: white;
+}
+
+.step.active.yellow {
+    background-color: var(--yellow-500);
+    color: white;
+}
+
+.step.active.yellow-light {
+    background-color: var(--yellow-100);
+    color: white;
+}
+
+.line {
+    width: 80px;
+    height: 2px;
+    border-radius: 6px;
+    background-color: var(--green-700);
+}
+
+.dots {
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: var(--green-300);
+    border-radius: 50%;
+    opacity: 0.3;
+    transition: all 0.2s;
+}
+
+.dot.active {
+    opacity: 1;
+    width: 72px;
+    border-radius: 20px;
 }
