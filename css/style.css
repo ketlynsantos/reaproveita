@@ -42,8 +42,16 @@ input {
     padding: 20px 40px;
 }
 
+.two-column {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 32px;
+}
+
 .col {
-    width: 50%;
+    flex: 1 1 0;
+    min-width: 300px;
 }
 
 .col-text {
@@ -61,7 +69,6 @@ input {
 .col-img img {
     width: 100%;
     object-fit: contain;
-    object-position: center;
 }
 
 .title {
@@ -72,7 +79,7 @@ input {
 }
 
 .description {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
     color: var(--green-700);
 }
@@ -91,12 +98,19 @@ input {
     border: none;
     border-radius: 8px;
     color: white;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 100;
     letter-spacing: 0.0.1rem;
     cursor: pointer;
     transition: all 0.3s;
 }
+
+.btn strong,
+.btn.big {
+    font-size: 16px;
+    font-weight: 600;
+}
+
 
 .btn .btn-text {
     display: flex;
@@ -104,16 +118,12 @@ input {
     align-items: flex-start;
 }
 
-.btn strong {
-    font-size: 16px;
-    font-weight: 600;
-}
+.btn.green { background-color: var(--green-700); }
+.btn.green:hover { background-color: var(--green-800); }
 
-.btn-android { background-color: var(--green-700); }
-.btn-android:hover { background-color: var(--green-800); }
+.btn.orange { background-color: var(--orange-500); }
+.btn.orange:hover { background-color: var(--orange-700); }
 
-.btn-apple { background-color: var(--orange-500); }
-.btn-apple:hover { background-color: var(--orange-700); }
 
 /* Menu */
 .menu-container {
