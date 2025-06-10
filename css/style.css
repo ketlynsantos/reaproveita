@@ -230,6 +230,11 @@ input {
     cursor: pointer;
 }
 
+.fade {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
 .step.red {
     border: 2px solid var(--red-500);
     color: var(--red-500);

@@ -25,26 +25,54 @@ const steps = document.querySelectorAll('.step');
 const title = document.getElementById('step-title');
 const description = document.getElementById('step-description');
 const dotsContainer = document.getElementById('steps-dots');
+let currentIndex = 0;
+let dots = [];
 
-function updateStep(index) {
-    // Atualiza título e texto
-    title.textContent = stepsData[index].title;
-    title.className = `subtitle ${stepsData[index].className}`;
-    description.textContent = stepsData[index].description;
-
-    // Atualiza classes ativas nos passos
-    steps.forEach((step, i) => {
-        step.classList.toggle('active', i === index);
-    });
-
-    // Atualiza dots
-    dotsContainer.innerHTML = '';
-    stepsData.forEach((_, i) => {
+function createDots() {
+    for (let i = 0; i < stepsData.length; i++) {
         const dot = document.createElement('div');
         dot.classList.add('dot');
-        if (i === index) dot.classList.add('active');
+        if (i === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => {
+            currentIndex = i;
+            updateStep(currentIndex);
+        });
         dotsContainer.appendChild(dot);
-    });
+        dots.push(dot);
+    }
+}
+
+function updateStep(index) {
+    // Aplica fade-out
+    title.classList.add('fade');
+    description.classList.add('fade');
+
+    setTimeout(() => {
+        // Troca o conteúdo
+        title.textContent = stepsData[index].title;
+        title.className = `subtitle ${stepsData[index].className}`;
+        description.textContent = stepsData[index].description;
+        description.classList.remove('fade');
+
+        // Força reflow para reiniciar a animação
+        void title.offsetWidth;
+        void description.offsetWidth;
+
+        // Aplica fade-in (remoção da classe fade volta a opacidade)
+        title.classList.remove('fade');
+
+        // Atualiza steps ativos
+        steps.forEach((step, i) => {
+            step.classList.toggle('active', i === index);
+        });
+
+        // Atualiza os dots
+        dots.forEach(dot => dot.classList.remove('active'));
+        if (dots[index]) {
+            dots[index].classList.add('active');
+        }
+
+    }, 300); // Tempo do fade-out
 }
 
 steps.forEach(step => {
@@ -55,4 +83,5 @@ steps.forEach(step => {
 });
 
 // Inicializa na etapa 0
+createDots();
 updateStep(0);
