@@ -71,6 +71,10 @@ input {
     gap: 32px;
 }
 
+.hero {
+    margin-top: 90px;
+}
+
 .bg-orange {
     background-color: var(--orange-100);
 }
@@ -545,6 +549,13 @@ input {
 }
 
 @media screen and (max-width: 680px) {
+    .hero,
+    .hero .col-text {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
     .title {
         width: 80%;
     }
