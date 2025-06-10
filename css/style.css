@@ -162,6 +162,7 @@ input {
     border-radius: 50%;
     opacity: 0.3;
     transition: all 0.2s;
+    cursor: pointer;
 }
 
 .dots.green .dot { background-color: var(--green-300); }
