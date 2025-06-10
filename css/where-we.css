@@ -1,0 +1,13 @@
+@media screen and (max-width: 680px) {
+    .hero {
+        flex-direction: column-reverse;
+    }
+
+    .hero .col-img {
+        display: block;
+    }
+
+    .hero .col-img img {
+        height: 400px;
+    }
+}
