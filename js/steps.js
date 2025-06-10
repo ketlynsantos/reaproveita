@@ -25,8 +25,8 @@ const steps = document.querySelectorAll('.step');
 const title = document.getElementById('step-title');
 const description = document.getElementById('step-description');
 const dotsContainer = document.getElementById('steps-dots');
-let currentIndex = 0;
-let dots = [];
+let stepCurrentIndex = 0;
+let stepDots = [];
 
 function createDots() {
     for (let i = 0; i < stepsData.length; i++) {
@@ -34,11 +34,11 @@ function createDots() {
         dot.classList.add('dot');
         if (i === 0) dot.classList.add('active');
         dot.addEventListener('click', () => {
-            currentIndex = i;
-            updateStep(currentIndex);
+            stepCurrentIndex = i;
+            updateStep(stepCurrentIndex);
         });
         dotsContainer.appendChild(dot);
-        dots.push(dot);
+        stepDots.push(dot);
     }
 }
 
@@ -67,9 +67,9 @@ function updateStep(index) {
         });
 
         // Atualiza os dots
-        dots.forEach(dot => dot.classList.remove('active'));
-        if (dots[index]) {
-            dots[index].classList.add('active');
+        stepDots.forEach(dot => dot.classList.remove('active'));
+        if (stepDots[index]) {
+            stepDots[index].classList.add('active');
         }
 
     }, 300); // Tempo do fade-out
