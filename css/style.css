@@ -50,6 +50,14 @@ input {
     gap: 32px;
 }
 
+.two-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
+
 .bg-orange {
     background-color: var(--orange-100);
 }
@@ -266,4 +274,13 @@ input {
     opacity: 1;
     width: 72px;
     border-radius: 20px;
+}
+
+/* Parceiros */
+.companies-content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
