@@ -11,13 +11,13 @@ let totalGroups = Math.ceil(blogCards.length / cardsPerView);
 // Atualiza número de grupos ao redimensionar
 window.addEventListener('resize', () => {
     cardsPerView = getCardsPerView();
-    totalGroups = Math.ceil(blogCards.length / cardsPerView);
+    totalGroups =  Math.max(blogCards.length - cardsPerView + 1, 1);
     updateBlogCarousel(blogIndex);
     createDots();
 });
 
 function getCardsPerView() {
-    if (window.innerWidth <= 600) return 1;
+    if (window.innerWidth <= 768) return 1;
     if (window.innerWidth <= 1024) return 2;
     return 3;
 }
