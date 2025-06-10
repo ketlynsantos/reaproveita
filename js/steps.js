@@ -24,7 +24,7 @@ const stepsData = [
 const steps = document.querySelectorAll('.step');
 const title = document.getElementById('step-title');
 const description = document.getElementById('step-description');
-const dotsContainer = document.getElementById('dots');
+const dotsContainer = document.getElementById('steps-dots');
 
 function updateStep(index) {
     // Atualiza título e texto
