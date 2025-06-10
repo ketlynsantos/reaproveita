@@ -151,6 +151,27 @@ input {
 .btn.orange { background-color: var(--orange-500); }
 .btn.orange:hover { background-color: var(--orange-700); }
 
+.dots {
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    opacity: 0.3;
+    transition: all 0.2s;
+}
+
+.dots.green .dot { background-color: var(--green-300); }
+.dots.orange .dot { background-color: var(--orange-700); }
+
+.dot.active {
+    opacity: 1;
+    width: 72px;
+    border-radius: 20px;
+}
 
 /* Menu */
 .menu-container {
