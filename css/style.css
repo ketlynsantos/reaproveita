@@ -299,107 +299,6 @@ input {
     cursor: pointer;
 }
 
-/* Hero */
-.hero {
-    margin-top: 90px;
-}
-
-/* Como Funciona */
-.how-work {
-    padding: 80px 40px 0;
-    margin-bottom: 20px;
-}
-
-.how-work .col-img {
-    justify-content: flex-start;
-}
-
-.steps {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.step {
-    width: 40px;
-    height: 40px;
-    border-radius: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.fade {
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.step.red {
-    border: 2px solid var(--red-500);
-    color: var(--red-500);
-}
-
-.step.orange {
-    border: 2px solid var(--orange-700);
-    color: var(--orange-700);
-}
-
-.step.yellow {
-    border: 2px solid var(--yellow-500);
-    color: var(--yellow-500);
-}
-
-.step.yellow-light {
-    border: 2px solid var(--yellow-100);
-    color: var(--yellow-100);
-}
-
-.step.active.red {
-    background-color: var(--red-500);
-    color: white;
-}
-
-.step.active.orange {
-    background-color: var(--orange-500);
-    color: white;
-}
-
-.step.active.yellow {
-    background-color: var(--yellow-500);
-    color: white;
-}
-
-.step.active.yellow-light {
-    background-color: var(--yellow-100);
-    color: white;
-}
-
-.line {
-    width: 10%;
-    height: 2px;
-    border-radius: 6px;
-    background-color: var(--green-700);
-}
-
-/* Parceiros */
-.companies-content {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 16px;
-    align-items: center;
-}
-
-/* Blog */
-.blog-carousel .carousel {
-    padding: 0 40px;
-    box-sizing: border-box;
-}
-
 /* Rodapé  */
 .download-app {
     position: relative
@@ -520,12 +419,6 @@ input {
         font-size: 18px;
     }
 
-    /* Como funciona */
-    .step {
-        width: 30px;
-        height: 30px;
-    }
-
     /* Rodapé */
     .footer-content .col-info a {
         font-size: 18px;
@@ -631,26 +524,6 @@ input {
         font-size: 16px;
     }
 
-    /* Como funciona */
-    .steps {
-        gap: 16px;
-    }
-
-    .step {
-        width: 24px;
-        height: 24px;
-    }
-
-    /* Parceiros */
-    .companies-content img {
-        height: 100px;
-    }
-
-    /* Blog */
-    .blog-carousel .carousel {
-        padding: 0 20px;
-    }
-
     /* Rodapé */
     .download-app::after {
         border-top-right-radius: 38px;
@@ -680,38 +553,13 @@ input {
         display: none;
     }
 
-    .hero,
-    .mission,
-    .hero .col-text,
-    .mission .col-text,
+    /* Rodapé */
     .download-app .col-text {
         justify-content: center;
         align-items: center;
         text-align: center;
     }
 
-    /* Hero */
-    .hero {
-        margin-top: 0;
-        height: 500px;
-        background-color: var(--orange-100);
-        clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 90%);
-    }
-
-    /* Como Funciona */
-    .how-work .col-img {
-        display: block;
-    }
-
-    .steps {
-        gap: 12px;
-    }
-
-    .line {
-        width: 5%;
-    }
-
-    /* Rodapé */
     .download-app::after {
         bottom: -30px;
         width: 80%;
@@ -743,32 +591,5 @@ input {
 
     .btn-content {
         flex-direction: column;
-    }
-
-    /* Como Funciona */
-    .how-work {
-        flex-direction: column-reverse;
-    }
-
-    .how-work .col-img img {
-        height: 400px;
-    }
-
-    .how-work .col-text {
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-    }
-
-    .steps {
-        width: 80%;
-        justify-content: center;
-    }
-}
-
-@media screen and (max-width: 420px) {
-    .hero {
-        height: auto;
-        padding: 80px 20px 60px;
     }
 }
