@@ -154,6 +154,75 @@ input {
 .btn.orange { background-color: var(--orange-500); }
 .btn.orange:hover { background-color: var(--orange-700); }
 
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.carousel-card {
+    flex: 0 0 33%;
+    padding: 0 8px;
+    box-sizing: border-box;
+}
+
+.carousel-card img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.carousel-card h3 {
+    color: var(--orange-500);
+}
+
+.carousel-info .value {
+    font-size: 128px;
+    color: var(--green-700);
+    font-weight: 900;
+    line-height: 1;
+}
+
+.carousel-info .label {
+    font-size: 24px;
+    color: var(--green-700);
+    text-align: center;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    background: none;
+    border: none;
+    color: var(--red-500);
+    cursor: pointer;
+    z-index: 2;
+}
+
+.carousel-btn.prev {
+    left: 10px;
+}
+
+.carousel-btn.next {
+    right: 10px;
+}
+
 .dots {
     display: flex;
     gap: 8px;
@@ -295,56 +364,8 @@ input {
     align-items: center;
 }
 
-/* Nossos Números */
-.carousel {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-}
-
-.carousel-track {
-    display: flex;
-    transition: transform 0.4s ease-in-out;
-}
-
-.carousel-slide {
-    min-width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.carousel-info .value {
-    font-size: 128px;
-    color: var(--green-700);
-    font-weight: 900;
-    line-height: 1;
-}
-
-.carousel-info .label {
-    font-size: 24px;
-    color: var(--green-700);
-    text-align: center;
-}
-
-.carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 3rem;
-    background: none;
-    border: none;
-    color: var(--red-500);
-    cursor: pointer;
-    z-index: 2;
-}
-
-.carousel-btn.prev {
-    left: 10px;
-}
-
-.carousel-btn.next {
-    right: 10px;
+/* Blog */
+.blog-carousel .carousel {
+    padding: 0 40px;
+    box-sizing: border-box;
 }
