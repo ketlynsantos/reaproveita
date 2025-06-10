@@ -1,6 +1,9 @@
-const track = document.querySelector('.carousel-track');
-const slides = document.querySelectorAll('.carousel-slide');
-const dotsCarousel = document.getElementById('carousel-dots');
+const track = document.querySelector('.numbers-carousel .carousel-track');
+const slides = document.querySelectorAll('.numbers-carousel .carousel-slide');
+const dotsCarousel = document.getElementById('numbers-dots');
+const numbersPrev = document.querySelector('.numbers-carousel .carousel-btn.prev');
+const numbersNext = document.querySelector('.numbers-carousel .carousel-btn.next');
+
 let carouselCurrentIndex = 0;
 let carouselDots = [];
 
@@ -27,12 +30,13 @@ function updateCarousel(index) {
     }
 }
 
-document.querySelector('.carousel-btn.next').addEventListener('click', () => {
+// Botões
+numbersNext.addEventListener('click', () => {
     carouselCurrentIndex = (carouselCurrentIndex + 1) % slides.length;
     updateCarousel(carouselCurrentIndex);
 });
 
-document.querySelector('.carousel-btn.prev').addEventListener('click', () => {
+numbersPrev.addEventListener('click', () => {
     carouselCurrentIndex = (carouselCurrentIndex - 1 + slides.length) % slides.length;
     updateCarousel(carouselCurrentIndex);
 });
