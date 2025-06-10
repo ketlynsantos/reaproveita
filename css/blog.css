@@ -1,0 +1,48 @@
+.blog-cards {
+    width: 80%;
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 16px;
+    box-sizing: border-box;
+}
+
+.card {
+    flex: 0 0 calc(50% - 16px);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.card h3 {
+    color: var(--orange-500);
+}
+
+.card img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+@media screen and (max-width: 1024px) {
+    .blog-cards {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .blog-cards {
+        gap: 32px;
+    }
+
+    .card {
+        flex: 0 0 100%;
+    }
+
+    .card img {
+        max-height: 300px;
+    }
+
+}
