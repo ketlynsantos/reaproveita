@@ -256,26 +256,6 @@ input {
     background-color: var(--green-700);
 }
 
-.dots {
-    display: flex;
-    gap: 8px;
-}
-
-.dot {
-    width: 12px;
-    height: 12px;
-    background-color: var(--green-300);
-    border-radius: 50%;
-    opacity: 0.3;
-    transition: all 0.2s;
-}
-
-.dot.active {
-    opacity: 1;
-    width: 72px;
-    border-radius: 20px;
-}
-
 /* Parceiros */
 .companies-content {
     width: 100%;
@@ -283,4 +263,58 @@ input {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+
+/* Nossos Números */
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.carousel-info .value {
+    font-size: 128px;
+    color: var(--green-700);
+    font-weight: 900;
+    line-height: 1;
+}
+
+.carousel-info .label {
+    font-size: 24px;
+    color: var(--green-700);
+    text-align: center;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    background: none;
+    border: none;
+    color: var(--red-500);
+    cursor: pointer;
+    z-index: 2;
+}
+
+.carousel-btn.prev {
+    left: 10px;
+}
+
+.carousel-btn.next {
+    right: 10px;
 }
