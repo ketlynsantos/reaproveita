@@ -39,7 +39,7 @@ input {
 }
 
 .container {
-    padding: 20px 40px;
+    padding: 40px;
 }
 
 .two-column {
@@ -158,6 +158,7 @@ input {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding: 20px 40px;
 }
 
 .menu-logo img {
