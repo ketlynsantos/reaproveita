@@ -160,11 +160,16 @@
 @media screen and (max-width: 616px) {
     /* Como Funciona */
     .how-work {
-        flex-direction: column-reverse;
+        flex-direction: column;
+    }
+
+    .how-work .col {
+        min-width: auto;
     }
 
     .how-work .col-img img {
         height: 400px;
+        object-position: bottom;
     }
 
     .how-work .col-text {
