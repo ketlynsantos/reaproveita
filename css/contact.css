@@ -30,7 +30,7 @@ a:hover {
     gap: 16px;
 }
 
-h3,
+.contact h3,
 .contact-methods h4 {
     color: var(--orange-500);
 }

@@ -290,6 +290,10 @@ textarea {
     gap: 50px;
 }
 
+.menu-items ul li.active a {
+    font-weight: 900;
+}
+
 .menu-items ul li a {
     color: var(--green-700);
     font-size: 20px;
