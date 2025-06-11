@@ -5,6 +5,11 @@ function validateEmail(email) {
     return email.includes('@') && email.includes('.');
 }
 
+function validateFullName(name) {
+    // verifica se há pelo menos duas palavras (nome + sobrenome)
+    return name.trim().split(' ').length >= 2;
+}
+
 function showMessageError(input, message) {
     input.classList.add('error');
     let messageError = input.nextElementSibling;
@@ -50,6 +55,9 @@ contactForm.addEventListener('submit', (e) => {
     if (name == '') {
         showMessageError(fieldName, 'O campo nome é obrigatório.');
         isValid = false;
+    } else if (!validateFullName(name)) {
+        showMessageError(fieldName, 'Digite seu nome completo (nome e sobrenome).');
+        isValid = false;
     }
 
     if (email == '') {
@@ -68,8 +76,11 @@ contactForm.addEventListener('submit', (e) => {
     if (message == '') {
         showMessageError(fieldMessage, 'O campo mensagem é obrigatório.');
         isValid = false;
-    } else if (message.length < 10) {
-        showMessageError(fieldMessage, 'A mensagem deve ter pelo menos 10 caracteres.');
+    } else if (message.length < 30) {
+        showMessageError(fieldMessage, 'A mensagem deve ter pelo menos 30 caracteres.');
+        isValid = false;
+    } else if (message.length > 500) {
+        showMessageError(fieldMessage, 'A mensagem não pode passar de 500 caracteres.');
         isValid = false;
     }
 
