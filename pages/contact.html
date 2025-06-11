@@ -46,11 +46,23 @@
     
                 <div class="col">
                     <h3 class="subtitle text-upper">Nos mande uma mensagem</h3>
-                    <form>
-                        <input type="text" placeholder="Nome">
-                        <input type="email" placeholder="Email">
-                        <input type="text" placeholder="Tipo de Contato">
-                        <textarea placeholder="Mensagem"></textarea>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <input type="text" name="name" id="name" placeholder="Nome">
+                            <small class="error-message"></small>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" id="email" placeholder="Email">
+                            <small class="error-message"></small>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="subject" id="subject" placeholder="Assunto">
+                            <small class="error-message"></small>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" id="message" placeholder="Mensagem"></textarea>
+                            <small class="error-message"></small>
+                        </div>
                         <button class="btn green big" type="submit">Enviar</button>
                     </form>
                 </div>
@@ -108,5 +120,6 @@
 
         <!-- Scripts -->
         <script src="/js/menu.js"></script>
+        <script src="/js/form.js"></script>
     </body>
 </html>
