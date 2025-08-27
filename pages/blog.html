@@ -6,6 +6,9 @@
         <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="/css/style.css">
         <link rel="stylesheet" href="/css/blog.css">
+        <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
         <title>Blog</title>
     </head>
     <body>
@@ -29,40 +32,7 @@
         <!-- Seção -->
         <section class="container two-row hero">
             <h1 class="title">Blog</h1>
-            <div class="blog-cards">
-                <div class="card">
-                    <img src="/assets/images/blog-1.png" alt="Milhos na espiga">
-                    <h3 class="subtitle text-upper">3 Receitas com sobra de milho cozido</h3>
-                    <p class="description">
-                        Se tem um ingrediente que é a cara do Brasil, é o milho! Vai bem doce, salgado, no café
-                        da manhã, no almoço...
-                    </p>
-                </div>
-                <div class="card">
-                    <img src="/assets/images/blog-2.png" alt="Panetone">
-                    <h3 class="subtitle text-upper">O que acontece com os panetones depois do natal?</h3>
-                    <p class="description">
-                        Você ja pensou sobre o que acontece com os panetones depois do Natal? Tradicionais na mesa
-                        dos brasileiros, os panetones se popularizam com...
-                    </p>
-                </div>
-                <div class="card text-white">
-                    <img src="/assets/images/blog-3.png" alt="Mesa de jantar no Natal">
-                    <h3 class="subtitle text-upper">Natal sem desperdício</h3>
-                    <p class="description">
-                        Você também concorda que Natal é uma das épocas mais esperadas e gostosas do ano? Tem salpicão,
-                        farofa (você é do time com...
-                    </p>
-                </div>
-                <div class="card text-white">
-                    <img src="/assets/images/blog-4.png" alt="Prato infantil com legumes">
-                    <h3 class="subtitle text-upper">Dicas de como inserir mais cores no prato das crianças</h3>
-                    <p class="description">
-                        Alimentar as crianças pode ser um desafio muito grande para os pais, principalmente para oferecer
-                        uma boa quantidade de nutrientes de forma diversa...
-                    </p>
-                </div>
-            </div>
+            <div id="react-blog" class="blog-cards"></div>
         </section>
 
         <!-- Seção Rodapé -->
@@ -121,5 +91,56 @@
 
         <!-- Scripts -->
         <script src="/js/menu.js"></script>
+        <script type="text/babel">
+            function BlogCard({img, alt, title, description, textWhite }) {
+                return (
+                    <div className={`card ${textWhite ? 'text-white' : ''}`}>
+                        <img src={img} alt={alt} />
+                        <h3 className="subtitle text-upper">{ title }</h3>
+                        <p className="description">{ description }</p>
+                    </div>
+                )
+            }
+
+            function Blog() {
+                const posts = [
+                    {
+                        img: '/assets/images/blog-1.png',
+                        alt: 'Milhos na espiga',
+                        title: '3 Receitas com sobra de milho cozido',
+                        description: 'Se tem um ingrediente que é a cara do Brasil, é o milho! Vai bem doce, salgado, no café da manhã, no almoço...',
+                    },
+                    {
+                        img: '/assets/images/blog-2.png',
+                        alt: 'Panetone',
+                        title: 'O que acontece com os panetones depois do natal?',
+                        description: 'Você ja pensou sobre o que acontece com os panetones depois do Natal? Tradicionais na mesa dos brasileiros, os panetones se popularizam com...',
+                    },
+                    {
+                        img: '/assets/images/blog-3.png',
+                        alt: 'Mesa de jantar no Natal',
+                        title: 'Natal sem desperdício',
+                        description: 'Você também concorda que Natal é uma das épocas mais esperadas e gostosas do ano? Tem salpicão, farofa (você é do time com...',
+                        textWhite: true
+                    },
+                    {
+                        img: '/assets/images/blog-4.png',
+                        alt: 'Prato infantil com legumes',
+                        title: 'Dicas de como inserir mais cores no prato das crianças',
+                        description: ' Alimentar as crianças pode ser um desafio muito grande para os pais, principalmente para oferecer uma boa quantidade de nutrientes de forma diversa...',
+                        textWhite: true
+                    },
+                ]
+
+                return (
+                    posts.map((post, i) => (
+                        <BlogCard key={i} {...post} />
+                    ))
+                )
+            }
+
+            const root = ReactDOM.createRoot(document.getElementById("react-blog"))
+            root.render(<Blog />)
+        </script>
     </body>
 </html>
