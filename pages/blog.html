@@ -32,7 +32,7 @@
         <!-- Seção -->
         <section class="container two-row hero">
             <h1 class="title">Blog</h1>
-            <div id="react-blog" class="blog-cards"></div>
+            <div id="react-blog" class="blog-content"></div>
         </section>
 
         <!-- Seção Rodapé -->
@@ -103,6 +103,7 @@
             }
 
             function Blog() {
+                const [search, setSearch] = React.useState('')
                 const posts = [
                     {
                         img: '/assets/images/blog-1.png',
@@ -158,10 +159,27 @@
                     }
                 ]
 
+                const filtered = posts.filter(
+                    post => post.title.toLocaleLowerCase().includes(search.toLocaleLowerCase())
+                )
+
                 return (
-                    posts.map((post, i) => (
-                        <BlogCard key={i} {...post} />
-                    ))
+                    <>
+                        <input
+                            class="search-field"
+                            type="text"
+                            placeholder="Buscar posts..."
+                            value={search}
+                            onChange={(e) => setSearch(e.target.value)}
+                        />
+                        <div class="blog-cards">
+                            {
+                                filtered.map((post, i) => (
+                                    <BlogCard key={i} {...post} />
+                                ))
+                            }
+                        </div>
+                    </>
                 )
             }
 
