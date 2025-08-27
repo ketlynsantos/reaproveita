@@ -2,17 +2,18 @@
     width: 80%;
     position: relative;
     display: flex;
-    flex-flow: row wrap;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 16px;
+    gap: 20px;
     box-sizing: border-box;
 }
 
 .card {
-    flex: 0 0 calc(50% - 16px);
+    flex: 0 0 calc(33.333% - 20px);
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 15px;
+    box-sizing: border-box;
 }
 
 .card h3 {
@@ -21,24 +22,28 @@
 
 .card img {
     width: 100%;
-    max-height: 400px;
+    max-height: 300px;
     object-fit: cover;
     border-radius: 8px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1168px) {
     .blog-cards {
         width: 100%;
+    }
+
+    .card {
+        flex: 0 0 calc(50% - 16px); /* 2 colunas */
     }
 }
 
 @media screen and (max-width: 768px) {
     .blog-cards {
-        gap: 32px;
+        gap: 24px;
     }
 
     .card {
-        flex: 0 0 100%;
+        flex: 0 0 100%; /* 1 coluna */
     }
 
     .card img {
