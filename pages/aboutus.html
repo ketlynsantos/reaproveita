@@ -1,144 +1,152 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" href="/css/style.css">
-        <title>Sobre Nós</title>
-    </head>
-    <body>
-        <div class="menu-container">
-            <div class="menu-logo">
-                <a href="/index.html">
-                    <img src="/assets/images/horizontal-logo.png" alt="Logo ReAproveita na Horinzontal">
-                </a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Sobre Nós</title>
+  </head>
+  <body>
+    <div class="menu-container">
+      <div class="menu-logo">
+        <a href="/index.html">
+          <img src="/assets/images/horizontal-logo.png" alt="Logo ReAproveita na Horinzontal" />
+        </a>
+      </div>
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+      <div class="menu-items" id="menu-items">
+        <ul>
+          <li class="active">
+            <a href="/pages/aboutus.html">Quem Somos</a>
+          </li>
+          <li><a href="/pages/where-we.html">Onde estamos</a></li>
+          <li><a href="/pages/blog.html">Blog</a></li>
+          <li><a href="/pages/contact.html">Fale Conosco</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Seção Hero -->
+    <section class="container two-column hero">
+      <div class="col col-img">
+        <img
+          src="/assets/images/app-person.png"
+          alt="Celular com uma pessoa segurando uma sacola de compras"
+        />
+      </div>
+      <div class="col col-text">
+        <h1 class="title wd-80">Transformando desperdício em oportunidade</h1>
+        <p class="description wd-80">
+          Conectamos supermercados e consumidores para evitar perdas e gerar impacto
+        </p>
+        <button class="btn green big" type="button">Fale conosco</button>
+      </div>
+    </section>
+
+    <!-- Seção Sobre nós -->
+    <section class="container two-row bg-orange">
+      <h2 class="title wd-100">Sobre nós</h2>
+      <p class="description" style="text-align: center">
+        A Reaproveita é uma plataforma digital — disponível em app e versão web — que conecta
+        supermercados e consumidores para combater o desperdício de alimentos. Nosso foco é
+        transformar produtos próximos do vencimento em oportunidades de economia e impacto positivo,
+        tanto para quem vende quanto para quem compra. Inspirada na ODS 2 da ONU (Fome Zero e
+        Agricultura Sustentável), nossa solução promove um ciclo sustentável: supermercados reduzem
+        perdas, consumidores têm acesso a alimentos mais acessíveis, e o meio ambiente agradece.
+      </p>
+    </section>
+
+    <!-- Seção Nossos Números -->
+    <section class="container two-row numbers-carousel">
+      <h2 class="title">Nossos Números</h2>
+      <div class="carousel">
+        <button class="carousel-btn prev" type="button">&#x2039;</button>
+
+        <div class="carousel-track">
+          <div class="carousel-slide active">
+            <div class="carousel-info">
+              <h1 class="value">+1.000</h1>
+              <p class="label">Produtos salvos</p>
             </div>
-            <div class="menu-toggle" id="menu-toggle">☰</div>
-            <div class="menu-items" id="menu-items">
-                <ul>
-                    <li class="active"><a href="/pages/aboutus.html">Quem Somos</a></li>
-                    <li><a href="/pages/where-we.html">Onde estamos</a></li>
-                    <li><a href="/pages/blog.html">Blog</a></li>
-                    <li><a href="/pages/contact.html">Fale Conosco</a></li>
-                </ul>
+          </div>
+          <div class="carousel-slide">
+            <div class="carousel-info">
+              <h1 class="value">+100</h1>
+              <p class="label">Supermercados no app</p>
             </div>
+          </div>
+          <div class="carousel-slide">
+            <div class="carousel-info">
+              <h1 class="value">+2.300</h1>
+              <p class="label">Familias economizando no app</p>
+            </div>
+          </div>
         </div>
 
-        <!-- Seção Hero -->
-        <section class="container two-column hero">
-            <div class="col col-img">
-                <img src="/assets/images/app-person.png" alt="Celular com uma pessoa segurando uma sacola de compras">
+        <button class="carousel-btn next" type="button">&#x203A;</button>
+      </div>
+      <div id="numbers-dots" class="dots orange"></div>
+    </section>
+
+    <!-- Seção Rodapé -->
+    <footer>
+      <section class="container two-column download-app">
+        <div class="col col-img">
+          <img src="/assets/images/app.png" alt="Celular com app de compras" />
+        </div>
+        <div class="col col-text">
+          <h1 class="title big wd-50">Baixe nosso app</h1>
+          <div class="btn-content">
+            <button class="btn green" type="button">
+              <img src="/assets/icons/play-store.png" alt="Ícone Google Play" />
+              <div class="btn-text">
+                <span>Disponivel no</span>
+                <strong>Google Play</strong>
+              </div>
+            </button>
+            <button class="btn orange" type="button">
+              <img src="/assets/icons/apple.png" alt="Ícone App Store" />
+              <div class="btn-text">
+                <span>Disponivel na</span>
+                <strong>App Store</strong>
+              </div>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="container two-row footer-content">
+        <div class="two-column">
+          <div class="col col-text">
+            <div class="col-info">
+              <h3 class="subtitle text-upper">Sobre nós</h3>
+              <a href="/pages/aboutus.html">Quem somos</a>
+              <a href="/pages/where-we.html">Onde estamos</a>
             </div>
-            <div class="col col-text">
-                <h1 class="title wd-80">Transformando desperdício em oportunidade</h1>
-                <p class="description wd-80">
-                   Conectamos supermercados e consumidores para evitar perdas e gerar impacto
-                </p>
-                <button class="btn green big" type="button">Fale conosco</button>
+
+            <div class="col-info">
+              <h3 class="subtitle text-upper">Contato</h3>
+              <a href="/pages/contact.html">Fale conosco</a>
             </div>
-        </section>
 
-        <!-- Seção Sobre nós -->
-        <section class="container two-row bg-orange">
-            <h2 class="title wd-100">Sobre nós</h2>
-            <p class="description" style="text-align: center;">
-                A Reaproveita é uma plataforma digital — disponível em app e versão web — que conecta supermercados
-                e consumidores para combater o desperdício de alimentos. Nosso foco é transformar produtos próximos
-                do vencimento em oportunidades de economia e impacto positivo, tanto para quem vende quanto para quem compra.
-                Inspirada na ODS 2 da ONU (Fome Zero e Agricultura Sustentável), nossa solução promove um ciclo sustentável:
-                supermercados reduzem perdas, consumidores têm acesso a alimentos mais acessíveis, e o meio ambiente agradece.
-            </p>
-        </section>
-
-        <!-- Seção Nossos Números -->
-        <section class="container two-row numbers-carousel">
-            <h2 class="title">Nossos Números</h2>
-            <div class="carousel">
-                <button class="carousel-btn prev" type="button">&#x2039;</button>
-
-                <div class="carousel-track">
-                    <div class="carousel-slide active">
-                        <div class="carousel-info">
-                            <h1 class="value">+1.000</h1>
-                            <p class="label">Produtos salvos</p>
-                        </div>
-                    </div>
-                    <div class="carousel-slide">
-                        <div class="carousel-info">
-                            <h1 class="value">+100</h1>
-                            <p class="label">Supermercados no app</p>
-                        </div>
-                    </div>
-                    <div class="carousel-slide">
-                        <div class="carousel-info">
-                            <h1 class="value">+2.300</h1>
-                            <p class="label">Familias economizando no app</p>
-                        </div>
-                    </div>
-                </div>
-
-                <button class="carousel-btn next" type="button">&#x203A;</button>
+            <div class="col-info">
+              <h3 class="subtitle text-upper">Assista o Vídeo</h3>
+              <a href="https://youtu.be/1haV2nooTmw" rel="noopener" target="_blank">Pitch Video</a>
             </div>
-            <div id="numbers-dots" class="dots orange"></div>
-        </section>
+          </div>
+          <div class="col col-img">
+            <a href="/index.html"><img src="/assets/images/logo.png" alt="Logo reaproveita" /></a>
+          </div>
+        </div>
+        <p class="footer-info">
+          &copy; 2025. ReAproveita | Av. Paulista - São Paulo, SP | Todos os direitos reservados.
+        </p>
+      </section>
+    </footer>
 
-        <!-- Seção Rodapé -->
-        <footer>
-            <section class="container two-column download-app">
-                <div class="col col-img">
-                    <img src="/assets/images/app.png" alt="Celular com app de compras">
-                </div>
-                <div class="col col-text">
-                    <h1 class=" title big wd-50">Baixe nosso app</h1>
-                    <div class="btn-content">
-                        <button class="btn green" type="button">
-                            <img src="/assets/icons/play-store.png" alt="Ícone Google Play">
-                            <div class="btn-text">
-                                <span>Disponivel no</span>
-                                <strong>Google Play</strong>
-                            </div>
-                        </button>
-                        <button class="btn orange" type="button">
-                            <img src="/assets/icons/apple.png" alt="Ícone App Store">
-                            <div class="btn-text">
-                                <span>Disponivel na</span>
-                                <strong>App Store</strong>
-                            </div>
-                        </button>
-                    </div>
-                </div>
-            </section>
-
-            <section class="container two-row footer-content">
-                <div class="two-column">
-                    <div class="col col-text">
-                        <div class="col-info">
-                            <h3 class="subtitle text-upper">Sobre nós</h3>
-                            <a href="/pages/aboutus.html">Quem somos</a>
-                            <a href="/pages/where-we.html">Onde estamos</a>
-                        </div>
-
-                        <div class="col-info">
-                            <h3 class="subtitle text-upper">Contato</h3>
-                            <a href="/pages/contact.html">Fale conosco</a>
-                        </div>
-
-                        <div class="col-info">
-                            <h3 class="subtitle text-upper">Assista o Vídeo</h3>
-                            <a href="https://youtu.be/1haV2nooTmw" rel="noopener" target="_blank">Pitch Video</a>
-                        </div>
-                    </div>
-                    <div class="col col-img">
-                        <a href="/index.html"><img src="/assets/images/logo.png" alt="Logo reaproveita"></a>
-                    </div>
-                </div>
-                <p class="footer-info">&copy; 2025. ReAproveita | Av. Paulista - São Paulo, SP | Todos os direitos reservados.</p>
-            </section>
-        </footer>
-
-        <!-- Scripts -->
-        <script src="/js/menu.js"></script>
-        <script src="/js/numbers-carousel.js"></script>
-    </body>
+    <!-- Scripts -->
+    <script src="/js/menu.js"></script>
+    <script src="/js/numbers-carousel.js"></script>
+  </body>
 </html>
