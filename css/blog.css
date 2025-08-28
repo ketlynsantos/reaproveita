@@ -1,48 +1,48 @@
 .blog-content {
-    width: 80%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-sizing: border-box;
+  width: 80%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
 }
 
 .search-field {
-    width: 80%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid var(--green-700);
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-bottom: 20px;
+  width: 80%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid var(--green-700);
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
 }
 
 .blog-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  box-sizing: border-box;
 }
 
 .card {
-    flex: 0 0 calc(33.333% - 20px);
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    box-sizing: border-box;
-    cursor: pointer;
+  flex: 0 0 calc(33.333% - 20px);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-sizing: border-box;
+  cursor: pointer;
 }
 
 .card h3 {
-    color: var(--orange-500);
+  color: var(--orange-500);
 }
 
 .card img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 8px;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
 .modal-overlay {
@@ -69,63 +69,69 @@
 }
 
 .modal-content h2 {
-    margin-right: 25px;
-    color: var(--orange-500);
-    line-height: normal;
-    text-transform: uppercase;
+  margin-right: 25px;
+  color: var(--orange-500);
+  line-height: normal;
+  text-transform: uppercase;
 }
 
 .modal-content img {
-    width: 100%;
-    height: 250px;
-    margin: 10px 0;
-    border-radius: 8px;
-    object-fit: cover;
+  width: 100%;
+  height: 250px;
+  margin: 10px 0;
+  border-radius: 8px;
+  object-fit: cover;
 }
 
 .modal-content p {
-    white-space: pre-line;
-    color: var(--green-300);
-    font-size: 16px;
-    line-height: 1.1;
+  white-space: pre-line;
+  color: var(--green-300);
+  font-size: 16px;
+  line-height: 1.1;
 }
 
 .modal-close {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: none;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-    height: 35px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  height: 35px;
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media screen and (max-width: 1168px) {
-    .blog-content {
-        width: 100%;
-    }
+  .blog-content {
+    width: 100%;
+  }
 
-    .card {
-        flex: 0 0 calc(50% - 16px);
-    }
+  .card {
+    flex: 0 0 calc(50% - 16px);
+  }
 }
 
 @media screen and (max-width: 768px) {
-    .blog-cards {
-        gap: 24px;
-    }
+  .blog-cards {
+    gap: 24px;
+  }
 
-    .card {
-        flex: 0 0 100%;
-    }
+  .card {
+    flex: 0 0 100%;
+  }
 
-    .modal-content {
-        max-width: 400px;
-    }
+  .modal-content {
+    max-width: 400px;
+  }
 }
