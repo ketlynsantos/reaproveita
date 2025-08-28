@@ -11,7 +11,7 @@ let totalGroups = Math.ceil(blogCards.length / cardsPerView);
 // Atualiza número de grupos ao redimensionar
 window.addEventListener('resize', () => {
     cardsPerView = getCardsPerView();
-    totalGroups =  Math.max(blogCards.length - cardsPerView + 1, 1);
+    totalGroups = Math.max(blogCards.length - cardsPerView + 1, 1);
     updateBlogCarousel(blogIndex);
     createDots();
 });
@@ -44,7 +44,7 @@ function createDots() {
 
 function updateBlogDots() {
     const allDots = blogDotsContainer.querySelectorAll('.dot');
-    allDots.forEach(dot => dot.classList.remove('active'));
+    allDots.forEach((dot) => dot.classList.remove('active'));
     if (allDots[blogIndex]) {
         allDots[blogIndex].classList.add('active');
     }

@@ -28,7 +28,7 @@ function hideMessageError(input) {
     input.classList.remove('error');
     let messageError = input.nextElementSibling;
 
-    if(messageError && messageError.classList.contains('error-message')) {
+    if (messageError && messageError.classList.contains('error-message')) {
         messageError.textContent = '';
     }
 }

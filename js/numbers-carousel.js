@@ -24,7 +24,7 @@ function createDots() {
 function updateCarousel(index) {
     track.style.transform = `translateX(-${index * 100}%)`;
 
-    carouselDots.forEach(dot => dot.classList.remove('active'));
+    carouselDots.forEach((dot) => dot.classList.remove('active'));
     if (carouselDots[index]) {
         carouselDots[index].classList.add('active');
     }
